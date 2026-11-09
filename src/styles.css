@@ -947,3 +947,66 @@ h1, h2, h3, .font-display, .hero-title {
 }
 .glass-panel::before { display: none; }
 .nv-pill { background: hsl(0 0% 100%); color: hsl(0 0% 0%); border-radius: 9999px; }
+
+/* Polished mobile-first token app layer */
+.mining-page .nv-card,
+.mining-page .market-card {
+  background: linear-gradient(145deg, rgba(21, 30, 53, .92), rgba(10, 15, 29, .92)) !important;
+  border: 1px solid rgba(187, 204, 255, .12) !important;
+  box-shadow: 0 18px 48px rgba(2, 7, 21, .28), inset 0 1px 0 rgba(255, 255, 255, .07) !important;
+  border-radius: 24px;
+}
+.mining-page .nv-card::after { opacity: .48; }
+.mining-page .mining-balance-card {
+  background: radial-gradient(ellipse at 50% -15%, rgba(94, 108, 255, .25), transparent 58%),
+    linear-gradient(145deg, rgba(21, 30, 53, .97), rgba(10, 15, 29, .97)) !important;
+}
+.mining-page .hero-title {
+  font-family: 'Geist', 'Inter', sans-serif !important;
+  font-weight: 750 !important;
+  letter-spacing: -.055em !important;
+  text-shadow: 0 8px 30px rgba(120, 131, 255, .18);
+}
+.mining-page .nv-pill {
+  min-height: 54px;
+  border: 1px solid rgba(255, 255, 255, .27);
+  background: linear-gradient(100deg, #9c75ff 0%, #6175ff 52%, #43c7df 100%) !important;
+  color: #fff !important;
+  font-family: 'Geist', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: .01em;
+  box-shadow: 0 10px 28px rgba(98, 104, 255, .28), inset 0 1px 0 rgba(255, 255, 255, .25);
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+.mining-page .nv-pill:not(:disabled):active { transform: scale(.98); filter: brightness(1.08); }
+.mining-page .nv-pill:disabled { cursor: default; opacity: .92; }
+.mining-page .nv-pill.mining-active {
+  background: linear-gradient(100deg, #197d73, #238f85 55%, #26a092) !important;
+  box-shadow: 0 10px 26px rgba(22, 150, 133, .2), inset 0 1px 0 rgba(255, 255, 255, .22);
+}
+.mining-page .market-card {
+  color: inherit;
+  text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.mining-page .market-card:active { transform: scale(.99); border-color: rgba(108, 203, 255, .35) !important; }
+.mining-page .gram-balance { background: linear-gradient(145deg, rgba(53, 78, 130, .3), rgba(10, 15, 29, .93)) !important; }
+.mining-page .usdt-balance { background: linear-gradient(145deg, rgba(27, 112, 93, .28), rgba(10, 15, 29, .93)) !important; }
+@media (prefers-reduced-motion: reduce) {
+  .mining-page *, .mining-page *::before, .mining-page *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Consistent accent treatment for the rest of the app */
+.max-w-lg button[class*="bg-primary"],
+.max-w-lg a[class*="bg-primary"] {
+  background-image: linear-gradient(105deg, #9c75ff 0%, #6175ff 55%, #43c7df 100%);
+  color: #fff;
+  border-color: rgba(255, 255, 255, .18);
+  box-shadow: 0 8px 22px rgba(90, 104, 255, .2), inset 0 1px 0 rgba(255, 255, 255, .16);
+}
+.max-w-lg button[class*="bg-primary"]:active,
+.max-w-lg a[class*="bg-primary"]:active { filter: brightness(1.08); }
+.max-w-lg button[class*="bg-secondary"]:not(:disabled) {
+  border-color: rgba(185, 199, 255, .16);
+}
