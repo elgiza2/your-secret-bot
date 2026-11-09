@@ -5,10 +5,16 @@ export const Route = createFileRoute("/")({
   component: MiningPage,
   head: () => ({
     meta: [
-      { title: "Nova - Mine NOVA, TON and USDT in Telegram" },
-      { name: "description", content: "Nova: mine NOVA, TON and USDT every 8 hours, complete tasks and invite friends, right inside Telegram." },
-      { property: "og:title", content: "Nova - Mine NOVA, TON and USDT in Telegram" },
-      { property: "og:description", content: "Mine every 8 hours, complete tasks and invite friends, right inside Telegram." },
+      { title: "Groyper Miner - GROYP on TON" },
+      {
+        name: "description",
+        content: "Track the GROYP token market and in-app mining balance on TON.",
+      },
+      { property: "og:title", content: "Groyper Miner - GROYP on TON" },
+      {
+        property: "og:description",
+        content: "View the live GROYP quote and manage in-app mining rewards.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
