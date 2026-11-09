@@ -1,4 +1,4 @@
-import { GRAM_ICON, NOVA_ICON } from "@/lib/currency-icons";
+import { GRAM_ICON, GROYP_ICON } from "@/lib/currency-icons";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -51,13 +51,13 @@ const MiningPage = () => {
         >
           <div className="flex items-center justify-center gap-2">
             <img
-              src={NOVA_ICON}
-              alt="Token"
+              src={GROYP_ICON}
+              alt="GROYP"
               className="h-8 w-8 shrink-0 rounded-full object-cover ring-2 ring-white/15"
             />
             <div className="text-left">
-              <p className="nv-eyebrow">YOUR TOKEN BALANCE</p>
-              <p className="text-[10px] text-white/55">Mining account</p>
+              <p className="nv-eyebrow">IN-APP MINING BALANCE</p>
+              <p className="text-[10px] text-white/55">GROYP market shown below</p>
             </div>
           </div>
           <p className="hero-title mt-3 text-center text-[52px] font-bold leading-none tracking-tight">
@@ -104,14 +104,14 @@ const MiningPage = () => {
           target="_blank"
           rel="noreferrer"
           className="market-card mt-3 block rounded-2xl p-4"
-          aria-label="View token market information"
+          aria-label="View GROYP market information"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.04, duration: 0.4 }}
         >
           <div className="flex items-center justify-between gap-3">
             <div>
-              <p className="nv-eyebrow">LIVE TOKEN MARKET</p>
+              <p className="nv-eyebrow">GROYP LIVE MARKET</p>
               <p className="mt-1 text-xl font-bold tracking-tight text-white">
                 {formatPrice(market.priceUsd)}
               </p>

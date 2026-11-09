@@ -91,16 +91,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover",
       },
-      { title: "Nova AI - Mine, Battle & Earn Gram" },
+      { title: "Groyper Miner - GROYP on TON" },
       {
         name: "description",
-        content: "Nova AI: mine NOVA, battle monsters, and earn Gram cryptocurrency",
+        content: "Track GROYP market data and in-app mining rewards on TON.",
       },
-      { name: "author", content: "Nova AI" },
-      { property: "og:title", content: "Nova AI - Mine, Battle & Earn Gram" },
+      { name: "author", content: "Groyper Miner" },
+      { property: "og:title", content: "Groyper Miner - GROYP on TON" },
       {
         property: "og:description",
-        content: "Nova AI: mine NOVA, battle monsters, and earn Gram cryptocurrency",
+        content: "Track GROYP market data and in-app mining rewards on TON.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -118,7 +118,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap",
       },
-      { rel: "preconnect", href: "https://iqosbhbbyzqozfgpthyj.supabase.co", crossOrigin: "anonymous" },
+      {
+        rel: "preconnect",
+        href: "https://iqosbhbbyzqozfgpthyj.supabase.co",
+        crossOrigin: "anonymous",
+      },
       { rel: "preconnect", href: "https://telegram.org" },
     ],
     scripts: [
@@ -175,9 +179,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <ClientOnly
-        fallback={
-          <div className="min-h-screen" style={{ backgroundColor: "hsl(160 16% 6%)" }} />
-        }
+        fallback={<div className="min-h-screen" style={{ backgroundColor: "hsl(160 16% 6%)" }} />}
       >
         <TonConnectUIProvider
           manifestUrl={resolveTonManifestUrl()}
